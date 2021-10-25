@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/act_dat.js"></script>
+    <link rel="stylesheet" href="./estilo.css">
+    <title>consulta usuarios</title>
+</head>
+<body>
+    <a href="/vehiculos">Vehiculos</a>
+    <h1>Datos Personales</h1>
+    <form class="resultado">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Telefono</th>
+                    <th>Correo</th>
+                </tr>
+            </thead>
+            <tbody >
+                <% datos.forEach(function (datos){ %>
+                <tr class="resu">
+                    <td><input type="text" value="<%=datos.usuid%>" name="usuid" id="usuid" class="usuid"></td>
+                    <td><input type="text" value="<%=datos.datnombre%>" name="datnombre" id="datnombre" class="datnombre"></td>
+                    <td><input type="text" value="<%=datos.datapellido%>" name="datapellido" id="datapellido" class="datapellido"></td>
+                    <td><input type="text" value="<%=datos.datelefono%>" name="datelefono" id="datelefono" class="datelefono"></td>
+                    <td><input type="text" value="<%=datos.datcorreo%>" name="datcorreo" id="datcorreo" class="datcorreo"></td>
+                    <td><input type="submit" value="actualizar" name="btnact" id="btnact" class="btnact"></td>
+                </tr>
+                <%})%>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>

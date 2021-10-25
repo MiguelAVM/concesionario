@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilo.css">
+    <title>Vehiculos</title>
+</head>
+<body>
+    <h1>Vehiculos</h1>
+    <form action="/frminsertar_compra" method="POST" class="insertar" >
+    Precio Mínimo
+    <td><input type="number" name="min" id="min" class="min" ></td>
+    Precio Máximo
+    <td><input type="number" name="max" id="max" class="max" ></td>
+    <br>
+    <input type="submit" value="Filtrar" >
+    </form>
+    <form class="resultado">
+        <table>
+            <thead>
+                <tr>
+                    <th>Modelo</th>
+                    <th>Marca</th>
+                    <th>Estado</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody >
+                <% datos.forEach(function (datos){ %>
+                <tr class="resu">
+                    <td><input type="text" value="<%=datos.placa%>" name="placa" id="placa" class="placa"></td>
+                    <td><input type="text" value="<%=datos.modelo%>" name="modelo" id="modelo" class="modelo"></td>
+                    <td><input type="text" value="<%=datos.marca%>" name="marca" id="marca" class="marca"></td>
+                    <td><input type="text" value="<%=datos.estado%>" name="estado" id="estado" class="estado"></td>
+                    <td><input type="text" value="<%=datos.precio%>" name="precio" id="precio" class="precio"></td>
+                    <td><a href="/" class="comprar_ve">Comprar</a></td>
+                </tr>
+                <%})%>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>

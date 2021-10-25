@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilo.css">
+    <title>consulta usuarios</title>
+</head>
+<body>
+    <h1>Usuario</h1>
+    <form action="/frminsertar" method="POST" class="insertar">
+    <aside>Placa</aside><input type="text" name="usuid" value="">
+    <aside>ID</aside><input type="text" name="usulogin" value="">
+    <aside>ID Categoria</aside><input type="text" name="usupassword" value="">
+    <br>
+    <input type="submit" value="insertar" >
+    </form>
+    <form class="resultado">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Usuario</th>
+                    <th>Contraseña</th>
+                </tr>
+            </thead>
+            <tbody >
+                <% datos.forEach(function (datos){ %>
+                <tr class="resu">
+                    <td><input type="text" value="<%=datos.usuid%>" name="usuid" id="usuid" class="usuid"></td>
+                    <td><input type="text" value="<%=datos.usulogin%>" name="usulogin" id="usulogin" class="usulogin"></td>
+                    <td><input type="text" value="<%=datos.usupassword%>" name="usupassword" id="usupassword" class="usupassword"></td>
+                    <td><input type="text" value="actualizar" name="btnact" id="btnact" class="btnact"></td>
+                    <td><input type="text" value="eliminar" name="btneli" id="btneli" class="btneli"></td>
+                </tr>
+                <%})%>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>

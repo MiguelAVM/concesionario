@@ -1,0 +1,1 @@
+CREATE TABLE `concesionario`.`datospersonales` ( `datid` INT(10) NOT NULL , `usuid` INT(10) NOT NULL , `datnombre` VARCHAR(50) NOT NULL , `datapellido` VARCHAR(50) NOT NULL , `datipoid` VARCHAR(20) NOT NULL , `datnumeroid` VARCHAR(20) NOT NULL , `datelefono` VARCHAR(20) NOT NULL , `datcorreo` INT(50) NOT NULL ) ENGINE = InnoDB;

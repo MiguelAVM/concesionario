@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilo.css">
+    <title>Vehiculos</title>
+</head>
+<body>
+    <h1>Vehiculos</h1>
+    <a href="/usuario">Usuario</a>
+    <form action="/frminsertar" method="POST" class="insertar">
+    <aside>Placa</aside><input type="text" name="placa" value="">
+    <aside>ID</aside><input type="text" name="datid" value="">
+    <aside>ID Categoria</aside><input type="text" name="catid" value="">
+    <aside>Modelo</aside><input type="text" name="modelo" value="">
+    <aside>Marca</aside><input type="text" name="marca" value="">
+    <aside>Estado</aside><input type="text"name="estado" value="">
+    <aside>Precio</aside><input type="text"name="precio" value="">
+    <br>
+    <input type="submit" value="insertar" >
+    </form>
+    <form class="resultado">
+        <table>
+            <thead>
+                <tr>
+                    <th>Placa</th>
+                    <th>ID</th>
+                    <th>ID Categoria</th>
+                    <th>Modelo</th>
+                    <th>Marca</th>
+                    <th>Estado</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody >
+                <% datos.forEach(function (datos){ %>
+                <tr class="resu">
+                    <td><input type="text" value="<%=datos.placa%>" name="placa" id="placa" class="placa"></td>
+                    <td><input type="text" value="<%=datos.datid%>" name="datid" id="datid" class="datid"></td>
+                    <td><input type="text" value="<%=datos.catid%>" name="catid" id="catid" class="catid"></td>
+                    <td><input type="text" value="<%=datos.modelo%>" name="modelo" id="modelo" class="modelo"></td>
+                    <td><input type="text" value="<%=datos.marca%>" name="marca" id="marca" class="marca"></td>
+                    <td><input type="text" value="<%=datos.estado%>" name="estado" id="estado" class="estado"></td>
+                    <td><input type="text" value="<%=datos.precio%>" name="precio" id="precio" class="precio"></td>
+                </tr>
+                <%})%>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+CREATE TABLE `concesionario`.`vehiculo` ( `placa` VARCHAR(10) NOT NULL , `datid` INT(10) NOT NULL , `catid` INT(10) NOT NULL , `modelo` INT(10) NOT NULL , `marca` VARCHAR(50) NOT NULL , `estado` VARCHAR(30) NOT NULL , `precio` INT(10) NOT NULL ) ENGINE = InnoDB;
